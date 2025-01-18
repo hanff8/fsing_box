@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:fsing_box/constants.dart';
-import 'package:fsing_box/framework/dashboard/dashboard.dart';
 
 void main() {
   runApp(const MainApp());
@@ -49,7 +48,7 @@ class _HomeWidgetState extends State<HomeWidget> with TickerProviderStateMixin {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text(APP_NAME),
+        title: Text(appName),
         bottom: TabBar(
           controller: _tabController,
           tabs: <Widget>[
@@ -81,7 +80,7 @@ class _HomeWidgetState extends State<HomeWidget> with TickerProviderStateMixin {
         controller: _tabController,
         children: [
           Center(
-            child: DashboardFragment(),
+            child: Text("1"),
           ),
           Center(
             child: Text("2"),

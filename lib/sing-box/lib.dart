@@ -1,5 +1,6 @@
 import 'dart:async';
 
+import 'package:fsing_box/models/core.dart';
 import 'package:fsing_box/sing-box/interface.dart';
 
 class SingboxLib with SingboxInterface {
@@ -31,15 +32,21 @@ class SingboxLib with SingboxInterface {
     throw UnimplementedError();
   }
 
-  @override
-  FutureOr<String> updateConfig(updateConfigParams) {
-    // TODO: implement updateConfig
-    throw UnimplementedError();
-  }
+  // @override
+  // FutureOr<String> updateConfig(updateConfigParams) {
+  //   // TODO: implement updateConfig
+  //   throw UnimplementedError();
+  // }
 
   @override
   FutureOr<bool> validateConfig(String data) {
     // TODO: implement validateConfig
+    throw UnimplementedError();
+  }
+
+  @override
+  FutureOr<String> updateConfig(UpdateConfigParams updateConfigParams) {
+    // TODO: implement updateConfig
     throw UnimplementedError();
   }
 }

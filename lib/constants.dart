@@ -1,1 +1,4 @@
-const APP_NAME = "FSing-Box";
+const appName = "FSing-Box";
+
+const singboxCoreVersion = "1.10";
+

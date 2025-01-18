@@ -1,0 +1,21 @@
+targets:
+  $default:
+    builders:
+      # 配置 source_gen:combining_builder
+      source_gen:combining_builder:
+        options:
+          build_extensions:
+            'lib/models/{{}}.dart': 'lib/models/generated/{{}}.g.dart'
+          
+      # 配置 freezed 构建器
+      freezed:
+        options:
+          build_extensions:
+            'lib/models/{{}}.dart': 'lib/models/generated/{{}}.freezed.dart'
+      
+      json_serializable:
+        options:
+          include_if_null: false
+          explicit_to_json: true
+          
+

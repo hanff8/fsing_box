@@ -1,6 +1,6 @@
 import 'dart:async';
 
-import 'package:fsing_box/model/core.dart';
+import 'package:fsing_box/models/core.dart';
 
 mixin SingboxInterface {
   FutureOr<bool> init(String homeDir);

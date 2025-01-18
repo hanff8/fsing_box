@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:fsing_box/model/app.dart';
+import 'package:fsing_box/models/app.dart';
 import 'package:provider/provider.dart';
 
 typedef StateAndChildWidgetBuilder<T> = Widget Function(T state, Widget? child);

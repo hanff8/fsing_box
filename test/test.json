@@ -1,0 +1,169 @@
+{
+    "log": {
+        "level": "info",
+        "timestamp": true
+    },
+    "experimental": {
+        "cache_file": {
+            "enabled": true,
+            "store_fakeip": false,
+            "store_rdrc": true
+        },
+        "clash_api": {
+            "external_controller": "127.0.0.1:9090",
+            "external_ui": "ui",
+            "secret": "",
+            "external_ui_download_url": "https://github.com/hanff8/metacutedx_zip/releases/download/v1.173.3/release.zip",
+            "external_ui_download_detour": "Direct",
+            "default_mode": "rule"
+        }
+    },
+    "dns": {
+        "rules": [
+            {
+                "action": "route",
+                "server": "defaultDns",
+                "outbound": "any"
+            },
+            {
+                "rule_set": [
+                    "geosite-cn",
+                    "geoip-cn"
+                ],
+                "action": "route",
+                "server": "dns_direct"
+            },
+            {
+                "clash_mode": "direct",
+                "action": "route",
+                "server": "dns_direct"
+            },
+            {
+                "clash_mode": "global",
+                "action": "route",
+                "server": "dns_proxy"
+            }
+        ],
+        "servers": [
+            {
+                "tag": "defaultDns",
+                "address": "223.5.5.5",
+                "address_strategy": "ipv4_only",
+                "detour": "Direct"
+            },
+            {
+                "tag": "dns_proxy",
+                "address": "https://dns.google/dns-query",
+                "address_resolver": "defaultDns",
+                "detour": "Connect"
+            },
+            {
+                "tag": "dns_direct",
+                "address": "https://dns.alidns.com/dns-query",
+                "address_resolver": "defaultDns",
+                "detour": "Direct"
+            }
+        ],
+        "final": "dns_proxy",
+        "strategy": "prefer_ipv4"
+    },
+    "inbounds": [
+        {
+            "type": "tun",
+            "tag": "singbox-tun",
+            "interface_name": "tun.sing-box",
+            "address": [
+                "172.18.0.1/30"
+            ],
+            "mtu": 1500,
+            "auto_route": true,
+            "strict_route": true,
+            "route_exclude_address": [
+                "224.0.0.167/16",
+                "192.168.0.0/16"
+            ],
+            "udp_timeout": "5m",
+            "stack": "mixed",
+            "platform": {
+                "http_proxy": {
+                    "enabled": true,
+                    "server": "127.0.0.1",
+                    "server_port": 2080
+                }
+            }
+        },
+        {
+            "type": "mixed",
+            "tag": "in"
+        }
+    ],
+    "outbounds": [
+        {
+            "type": "selector",
+            "tag": "Connect",
+            "outbounds": [
+                "Direct"
+            ]
+        },
+        {
+            "type": "selector",
+            "tag": "Final",
+            "outbounds": [
+                "Connect"
+            ]
+        }
+    ],
+    "route": {
+        "rules": [
+            {
+                "inbound": [
+                    "singbox-tun",
+                    "in"
+                ],
+                "action": "sniff"
+            },
+            {
+                "inbound": [
+                    "singbox-tun",
+                    "in"
+                ],
+                "action": "resolve",
+                "strategy": "prefer_ipv4"
+            },
+            {
+                "protocol": [
+                    "dns"
+                ],
+                "action": "hijack-dns"
+            },
+            {
+                "clash_mode": "direct",
+                "action": "route",
+                "outbound": "Direct"
+            },
+            {
+                "clash_mode": "global",
+                "action": "route",
+                "outbound": "Connect"
+            }
+        ],
+        "rule_set": [
+            {
+                "tag": "geoip-cn",
+                "format": "binary",
+                "url": "https://testingcf.jsdelivr.net/gh/lyc8503/sing-box-rules@rule-set-geoip/geoip-cn.srs",
+                "download_detour": "Direct",
+                "type": "remote"
+            },
+            {
+                "tag": "geosite-cn",
+                "format": "binary",
+                "url": "https://testingcf.jsdelivr.net/gh/lyc8503/sing-box-rules@rule-set-geosite/geosite-cn.srs",
+                "download_detour": "Direct",
+                "type": "remote"
+            }
+        ],
+        "final": "Final",
+        "auto_detect_interface": true
+    }
+}
