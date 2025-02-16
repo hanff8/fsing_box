@@ -146,3 +146,47 @@ class Endpoint with _$Endpoint {
   factory Endpoint.fromJson(Map<String, dynamic> json) =>
       _$EndpointFromJson(json);
 }
+
+@freezed
+class Headers with _$Headers {
+  factory Headers() = _Headers;
+
+  factory Headers.fromJson(Map<String, dynamic> json) =>
+      _$HeadersFromJson(json);
+  Map<String, dynamic> toJson() => _$HeadersToJson(this);
+}
+
+@freezed
+class UdpOverTcpObject with _$UdpOverTcpObject {
+  const factory UdpOverTcpObject({
+    @JsonKey(name: "enable") @Default(false) bool? enable,
+    @JsonKey(name: "version") @Default(0) int? version,
+  }) = _UdpOverTcpObject;
+
+  factory UdpOverTcpObject.fromJson(Map<String, dynamic> json) =>
+      _$UdpOverTcpObjectFromJson(json);
+}
+
+@freezed
+class Torrc with _$Torrc {
+  const factory Torrc({
+    @JsonKey(name: "ClientOnly") int? clientOnly,
+  }) = _Torrc;
+
+  factory Torrc.fromJson(Map<String, dynamic> json) => _$TorrcFromJson(json);
+}
+
+@freezed
+class Peer with _$Peer {
+  const factory Peer({
+    @JsonKey(name: "server") String? server,
+    @JsonKey(name: "server_port") int? serverPort,
+    @JsonKey(name: "public_key") String? publicKey,
+    @JsonKey(name: "pre_shared_key") String? preSharedKey,
+    @JsonKey(name: "allowed_ips") List<String>? allowedIps,
+    @JsonKey(name: "reserved") List<int>? reserved,
+  }) = _Peer;
+
+  factory Peer.fromJson(Map<String, dynamic> json) => _$PeerFromJson(json);
+}
+

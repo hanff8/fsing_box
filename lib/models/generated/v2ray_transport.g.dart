@@ -130,9 +130,3 @@ Map<String, dynamic> _$$V2RayTransportQuicImplToJson(
       'type': _$V2rayTransportTypeEnumMap[instance.type]!,
       'runtimeType': instance.$type,
     };
-
-_$HeadersImpl _$$HeadersImplFromJson(Map<String, dynamic> json) =>
-    _$HeadersImpl();
-
-Map<String, dynamic> _$$HeadersImplToJson(_$HeadersImpl instance) =>
-    <String, dynamic>{};

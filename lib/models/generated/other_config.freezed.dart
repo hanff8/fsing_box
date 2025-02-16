@@ -3189,3 +3189,713 @@ abstract class _Endpoint implements Endpoint {
   _$$EndpointImplCopyWith<_$EndpointImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
+
+Headers _$HeadersFromJson(Map<String, dynamic> json) {
+  return _Headers.fromJson(json);
+}
+
+/// @nodoc
+mixin _$Headers {
+  /// Serializes this Headers to a JSON map.
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class $HeadersCopyWith<$Res> {
+  factory $HeadersCopyWith(Headers value, $Res Function(Headers) then) =
+      _$HeadersCopyWithImpl<$Res, Headers>;
+}
+
+/// @nodoc
+class _$HeadersCopyWithImpl<$Res, $Val extends Headers>
+    implements $HeadersCopyWith<$Res> {
+  _$HeadersCopyWithImpl(this._value, this._then);
+
+  // ignore: unused_field
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
+
+  /// Create a copy of Headers
+  /// with the given fields replaced by the non-null parameter values.
+}
+
+/// @nodoc
+abstract class _$$HeadersImplCopyWith<$Res> {
+  factory _$$HeadersImplCopyWith(
+          _$HeadersImpl value, $Res Function(_$HeadersImpl) then) =
+      __$$HeadersImplCopyWithImpl<$Res>;
+}
+
+/// @nodoc
+class __$$HeadersImplCopyWithImpl<$Res>
+    extends _$HeadersCopyWithImpl<$Res, _$HeadersImpl>
+    implements _$$HeadersImplCopyWith<$Res> {
+  __$$HeadersImplCopyWithImpl(
+      _$HeadersImpl _value, $Res Function(_$HeadersImpl) _then)
+      : super(_value, _then);
+
+  /// Create a copy of Headers
+  /// with the given fields replaced by the non-null parameter values.
+}
+
+/// @nodoc
+@JsonSerializable()
+class _$HeadersImpl implements _Headers {
+  _$HeadersImpl();
+
+  factory _$HeadersImpl.fromJson(Map<String, dynamic> json) =>
+      _$$HeadersImplFromJson(json);
+
+  @override
+  String toString() {
+    return 'Headers()';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType && other is _$HeadersImpl);
+  }
+
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$$HeadersImplToJson(
+      this,
+    );
+  }
+}
+
+abstract class _Headers implements Headers {
+  factory _Headers() = _$HeadersImpl;
+
+  factory _Headers.fromJson(Map<String, dynamic> json) = _$HeadersImpl.fromJson;
+}
+
+UdpOverTcpObject _$UdpOverTcpObjectFromJson(Map<String, dynamic> json) {
+  return _UdpOverTcpObject.fromJson(json);
+}
+
+/// @nodoc
+mixin _$UdpOverTcpObject {
+  @JsonKey(name: "enable")
+  bool? get enable => throw _privateConstructorUsedError;
+  @JsonKey(name: "version")
+  int? get version => throw _privateConstructorUsedError;
+
+  /// Serializes this UdpOverTcpObject to a JSON map.
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
+
+  /// Create a copy of UdpOverTcpObject
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  $UdpOverTcpObjectCopyWith<UdpOverTcpObject> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class $UdpOverTcpObjectCopyWith<$Res> {
+  factory $UdpOverTcpObjectCopyWith(
+          UdpOverTcpObject value, $Res Function(UdpOverTcpObject) then) =
+      _$UdpOverTcpObjectCopyWithImpl<$Res, UdpOverTcpObject>;
+  @useResult
+  $Res call(
+      {@JsonKey(name: "enable") bool? enable,
+      @JsonKey(name: "version") int? version});
+}
+
+/// @nodoc
+class _$UdpOverTcpObjectCopyWithImpl<$Res, $Val extends UdpOverTcpObject>
+    implements $UdpOverTcpObjectCopyWith<$Res> {
+  _$UdpOverTcpObjectCopyWithImpl(this._value, this._then);
+
+  // ignore: unused_field
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
+
+  /// Create a copy of UdpOverTcpObject
+  /// with the given fields replaced by the non-null parameter values.
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? enable = freezed,
+    Object? version = freezed,
+  }) {
+    return _then(_value.copyWith(
+      enable: freezed == enable
+          ? _value.enable
+          : enable // ignore: cast_nullable_to_non_nullable
+              as bool?,
+      version: freezed == version
+          ? _value.version
+          : version // ignore: cast_nullable_to_non_nullable
+              as int?,
+    ) as $Val);
+  }
+}
+
+/// @nodoc
+abstract class _$$UdpOverTcpObjectImplCopyWith<$Res>
+    implements $UdpOverTcpObjectCopyWith<$Res> {
+  factory _$$UdpOverTcpObjectImplCopyWith(_$UdpOverTcpObjectImpl value,
+          $Res Function(_$UdpOverTcpObjectImpl) then) =
+      __$$UdpOverTcpObjectImplCopyWithImpl<$Res>;
+  @override
+  @useResult
+  $Res call(
+      {@JsonKey(name: "enable") bool? enable,
+      @JsonKey(name: "version") int? version});
+}
+
+/// @nodoc
+class __$$UdpOverTcpObjectImplCopyWithImpl<$Res>
+    extends _$UdpOverTcpObjectCopyWithImpl<$Res, _$UdpOverTcpObjectImpl>
+    implements _$$UdpOverTcpObjectImplCopyWith<$Res> {
+  __$$UdpOverTcpObjectImplCopyWithImpl(_$UdpOverTcpObjectImpl _value,
+      $Res Function(_$UdpOverTcpObjectImpl) _then)
+      : super(_value, _then);
+
+  /// Create a copy of UdpOverTcpObject
+  /// with the given fields replaced by the non-null parameter values.
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? enable = freezed,
+    Object? version = freezed,
+  }) {
+    return _then(_$UdpOverTcpObjectImpl(
+      enable: freezed == enable
+          ? _value.enable
+          : enable // ignore: cast_nullable_to_non_nullable
+              as bool?,
+      version: freezed == version
+          ? _value.version
+          : version // ignore: cast_nullable_to_non_nullable
+              as int?,
+    ));
+  }
+}
+
+/// @nodoc
+@JsonSerializable()
+class _$UdpOverTcpObjectImpl implements _UdpOverTcpObject {
+  const _$UdpOverTcpObjectImpl(
+      {@JsonKey(name: "enable") this.enable = false,
+      @JsonKey(name: "version") this.version = 0});
+
+  factory _$UdpOverTcpObjectImpl.fromJson(Map<String, dynamic> json) =>
+      _$$UdpOverTcpObjectImplFromJson(json);
+
+  @override
+  @JsonKey(name: "enable")
+  final bool? enable;
+  @override
+  @JsonKey(name: "version")
+  final int? version;
+
+  @override
+  String toString() {
+    return 'UdpOverTcpObject(enable: $enable, version: $version)';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$UdpOverTcpObjectImpl &&
+            (identical(other.enable, enable) || other.enable == enable) &&
+            (identical(other.version, version) || other.version == version));
+  }
+
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @override
+  int get hashCode => Object.hash(runtimeType, enable, version);
+
+  /// Create a copy of UdpOverTcpObject
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$UdpOverTcpObjectImplCopyWith<_$UdpOverTcpObjectImpl> get copyWith =>
+      __$$UdpOverTcpObjectImplCopyWithImpl<_$UdpOverTcpObjectImpl>(
+          this, _$identity);
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$$UdpOverTcpObjectImplToJson(
+      this,
+    );
+  }
+}
+
+abstract class _UdpOverTcpObject implements UdpOverTcpObject {
+  const factory _UdpOverTcpObject(
+      {@JsonKey(name: "enable") final bool? enable,
+      @JsonKey(name: "version") final int? version}) = _$UdpOverTcpObjectImpl;
+
+  factory _UdpOverTcpObject.fromJson(Map<String, dynamic> json) =
+      _$UdpOverTcpObjectImpl.fromJson;
+
+  @override
+  @JsonKey(name: "enable")
+  bool? get enable;
+  @override
+  @JsonKey(name: "version")
+  int? get version;
+
+  /// Create a copy of UdpOverTcpObject
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$UdpOverTcpObjectImplCopyWith<_$UdpOverTcpObjectImpl> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+Torrc _$TorrcFromJson(Map<String, dynamic> json) {
+  return _Torrc.fromJson(json);
+}
+
+/// @nodoc
+mixin _$Torrc {
+  @JsonKey(name: "ClientOnly")
+  int? get clientOnly => throw _privateConstructorUsedError;
+
+  /// Serializes this Torrc to a JSON map.
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
+
+  /// Create a copy of Torrc
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  $TorrcCopyWith<Torrc> get copyWith => throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class $TorrcCopyWith<$Res> {
+  factory $TorrcCopyWith(Torrc value, $Res Function(Torrc) then) =
+      _$TorrcCopyWithImpl<$Res, Torrc>;
+  @useResult
+  $Res call({@JsonKey(name: "ClientOnly") int? clientOnly});
+}
+
+/// @nodoc
+class _$TorrcCopyWithImpl<$Res, $Val extends Torrc>
+    implements $TorrcCopyWith<$Res> {
+  _$TorrcCopyWithImpl(this._value, this._then);
+
+  // ignore: unused_field
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
+
+  /// Create a copy of Torrc
+  /// with the given fields replaced by the non-null parameter values.
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? clientOnly = freezed,
+  }) {
+    return _then(_value.copyWith(
+      clientOnly: freezed == clientOnly
+          ? _value.clientOnly
+          : clientOnly // ignore: cast_nullable_to_non_nullable
+              as int?,
+    ) as $Val);
+  }
+}
+
+/// @nodoc
+abstract class _$$TorrcImplCopyWith<$Res> implements $TorrcCopyWith<$Res> {
+  factory _$$TorrcImplCopyWith(
+          _$TorrcImpl value, $Res Function(_$TorrcImpl) then) =
+      __$$TorrcImplCopyWithImpl<$Res>;
+  @override
+  @useResult
+  $Res call({@JsonKey(name: "ClientOnly") int? clientOnly});
+}
+
+/// @nodoc
+class __$$TorrcImplCopyWithImpl<$Res>
+    extends _$TorrcCopyWithImpl<$Res, _$TorrcImpl>
+    implements _$$TorrcImplCopyWith<$Res> {
+  __$$TorrcImplCopyWithImpl(
+      _$TorrcImpl _value, $Res Function(_$TorrcImpl) _then)
+      : super(_value, _then);
+
+  /// Create a copy of Torrc
+  /// with the given fields replaced by the non-null parameter values.
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? clientOnly = freezed,
+  }) {
+    return _then(_$TorrcImpl(
+      clientOnly: freezed == clientOnly
+          ? _value.clientOnly
+          : clientOnly // ignore: cast_nullable_to_non_nullable
+              as int?,
+    ));
+  }
+}
+
+/// @nodoc
+@JsonSerializable()
+class _$TorrcImpl implements _Torrc {
+  const _$TorrcImpl({@JsonKey(name: "ClientOnly") this.clientOnly});
+
+  factory _$TorrcImpl.fromJson(Map<String, dynamic> json) =>
+      _$$TorrcImplFromJson(json);
+
+  @override
+  @JsonKey(name: "ClientOnly")
+  final int? clientOnly;
+
+  @override
+  String toString() {
+    return 'Torrc(clientOnly: $clientOnly)';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$TorrcImpl &&
+            (identical(other.clientOnly, clientOnly) ||
+                other.clientOnly == clientOnly));
+  }
+
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @override
+  int get hashCode => Object.hash(runtimeType, clientOnly);
+
+  /// Create a copy of Torrc
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$TorrcImplCopyWith<_$TorrcImpl> get copyWith =>
+      __$$TorrcImplCopyWithImpl<_$TorrcImpl>(this, _$identity);
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$$TorrcImplToJson(
+      this,
+    );
+  }
+}
+
+abstract class _Torrc implements Torrc {
+  const factory _Torrc({@JsonKey(name: "ClientOnly") final int? clientOnly}) =
+      _$TorrcImpl;
+
+  factory _Torrc.fromJson(Map<String, dynamic> json) = _$TorrcImpl.fromJson;
+
+  @override
+  @JsonKey(name: "ClientOnly")
+  int? get clientOnly;
+
+  /// Create a copy of Torrc
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$TorrcImplCopyWith<_$TorrcImpl> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+Peer _$PeerFromJson(Map<String, dynamic> json) {
+  return _Peer.fromJson(json);
+}
+
+/// @nodoc
+mixin _$Peer {
+  @JsonKey(name: "server")
+  String? get server => throw _privateConstructorUsedError;
+  @JsonKey(name: "server_port")
+  int? get serverPort => throw _privateConstructorUsedError;
+  @JsonKey(name: "public_key")
+  String? get publicKey => throw _privateConstructorUsedError;
+  @JsonKey(name: "pre_shared_key")
+  String? get preSharedKey => throw _privateConstructorUsedError;
+  @JsonKey(name: "allowed_ips")
+  List<String>? get allowedIps => throw _privateConstructorUsedError;
+  @JsonKey(name: "reserved")
+  List<int>? get reserved => throw _privateConstructorUsedError;
+
+  /// Serializes this Peer to a JSON map.
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
+
+  /// Create a copy of Peer
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  $PeerCopyWith<Peer> get copyWith => throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class $PeerCopyWith<$Res> {
+  factory $PeerCopyWith(Peer value, $Res Function(Peer) then) =
+      _$PeerCopyWithImpl<$Res, Peer>;
+  @useResult
+  $Res call(
+      {@JsonKey(name: "server") String? server,
+      @JsonKey(name: "server_port") int? serverPort,
+      @JsonKey(name: "public_key") String? publicKey,
+      @JsonKey(name: "pre_shared_key") String? preSharedKey,
+      @JsonKey(name: "allowed_ips") List<String>? allowedIps,
+      @JsonKey(name: "reserved") List<int>? reserved});
+}
+
+/// @nodoc
+class _$PeerCopyWithImpl<$Res, $Val extends Peer>
+    implements $PeerCopyWith<$Res> {
+  _$PeerCopyWithImpl(this._value, this._then);
+
+  // ignore: unused_field
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
+
+  /// Create a copy of Peer
+  /// with the given fields replaced by the non-null parameter values.
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? server = freezed,
+    Object? serverPort = freezed,
+    Object? publicKey = freezed,
+    Object? preSharedKey = freezed,
+    Object? allowedIps = freezed,
+    Object? reserved = freezed,
+  }) {
+    return _then(_value.copyWith(
+      server: freezed == server
+          ? _value.server
+          : server // ignore: cast_nullable_to_non_nullable
+              as String?,
+      serverPort: freezed == serverPort
+          ? _value.serverPort
+          : serverPort // ignore: cast_nullable_to_non_nullable
+              as int?,
+      publicKey: freezed == publicKey
+          ? _value.publicKey
+          : publicKey // ignore: cast_nullable_to_non_nullable
+              as String?,
+      preSharedKey: freezed == preSharedKey
+          ? _value.preSharedKey
+          : preSharedKey // ignore: cast_nullable_to_non_nullable
+              as String?,
+      allowedIps: freezed == allowedIps
+          ? _value.allowedIps
+          : allowedIps // ignore: cast_nullable_to_non_nullable
+              as List<String>?,
+      reserved: freezed == reserved
+          ? _value.reserved
+          : reserved // ignore: cast_nullable_to_non_nullable
+              as List<int>?,
+    ) as $Val);
+  }
+}
+
+/// @nodoc
+abstract class _$$PeerImplCopyWith<$Res> implements $PeerCopyWith<$Res> {
+  factory _$$PeerImplCopyWith(
+          _$PeerImpl value, $Res Function(_$PeerImpl) then) =
+      __$$PeerImplCopyWithImpl<$Res>;
+  @override
+  @useResult
+  $Res call(
+      {@JsonKey(name: "server") String? server,
+      @JsonKey(name: "server_port") int? serverPort,
+      @JsonKey(name: "public_key") String? publicKey,
+      @JsonKey(name: "pre_shared_key") String? preSharedKey,
+      @JsonKey(name: "allowed_ips") List<String>? allowedIps,
+      @JsonKey(name: "reserved") List<int>? reserved});
+}
+
+/// @nodoc
+class __$$PeerImplCopyWithImpl<$Res>
+    extends _$PeerCopyWithImpl<$Res, _$PeerImpl>
+    implements _$$PeerImplCopyWith<$Res> {
+  __$$PeerImplCopyWithImpl(_$PeerImpl _value, $Res Function(_$PeerImpl) _then)
+      : super(_value, _then);
+
+  /// Create a copy of Peer
+  /// with the given fields replaced by the non-null parameter values.
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? server = freezed,
+    Object? serverPort = freezed,
+    Object? publicKey = freezed,
+    Object? preSharedKey = freezed,
+    Object? allowedIps = freezed,
+    Object? reserved = freezed,
+  }) {
+    return _then(_$PeerImpl(
+      server: freezed == server
+          ? _value.server
+          : server // ignore: cast_nullable_to_non_nullable
+              as String?,
+      serverPort: freezed == serverPort
+          ? _value.serverPort
+          : serverPort // ignore: cast_nullable_to_non_nullable
+              as int?,
+      publicKey: freezed == publicKey
+          ? _value.publicKey
+          : publicKey // ignore: cast_nullable_to_non_nullable
+              as String?,
+      preSharedKey: freezed == preSharedKey
+          ? _value.preSharedKey
+          : preSharedKey // ignore: cast_nullable_to_non_nullable
+              as String?,
+      allowedIps: freezed == allowedIps
+          ? _value._allowedIps
+          : allowedIps // ignore: cast_nullable_to_non_nullable
+              as List<String>?,
+      reserved: freezed == reserved
+          ? _value._reserved
+          : reserved // ignore: cast_nullable_to_non_nullable
+              as List<int>?,
+    ));
+  }
+}
+
+/// @nodoc
+@JsonSerializable()
+class _$PeerImpl implements _Peer {
+  const _$PeerImpl(
+      {@JsonKey(name: "server") this.server,
+      @JsonKey(name: "server_port") this.serverPort,
+      @JsonKey(name: "public_key") this.publicKey,
+      @JsonKey(name: "pre_shared_key") this.preSharedKey,
+      @JsonKey(name: "allowed_ips") final List<String>? allowedIps,
+      @JsonKey(name: "reserved") final List<int>? reserved})
+      : _allowedIps = allowedIps,
+        _reserved = reserved;
+
+  factory _$PeerImpl.fromJson(Map<String, dynamic> json) =>
+      _$$PeerImplFromJson(json);
+
+  @override
+  @JsonKey(name: "server")
+  final String? server;
+  @override
+  @JsonKey(name: "server_port")
+  final int? serverPort;
+  @override
+  @JsonKey(name: "public_key")
+  final String? publicKey;
+  @override
+  @JsonKey(name: "pre_shared_key")
+  final String? preSharedKey;
+  final List<String>? _allowedIps;
+  @override
+  @JsonKey(name: "allowed_ips")
+  List<String>? get allowedIps {
+    final value = _allowedIps;
+    if (value == null) return null;
+    if (_allowedIps is EqualUnmodifiableListView) return _allowedIps;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  final List<int>? _reserved;
+  @override
+  @JsonKey(name: "reserved")
+  List<int>? get reserved {
+    final value = _reserved;
+    if (value == null) return null;
+    if (_reserved is EqualUnmodifiableListView) return _reserved;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
+  @override
+  String toString() {
+    return 'Peer(server: $server, serverPort: $serverPort, publicKey: $publicKey, preSharedKey: $preSharedKey, allowedIps: $allowedIps, reserved: $reserved)';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$PeerImpl &&
+            (identical(other.server, server) || other.server == server) &&
+            (identical(other.serverPort, serverPort) ||
+                other.serverPort == serverPort) &&
+            (identical(other.publicKey, publicKey) ||
+                other.publicKey == publicKey) &&
+            (identical(other.preSharedKey, preSharedKey) ||
+                other.preSharedKey == preSharedKey) &&
+            const DeepCollectionEquality()
+                .equals(other._allowedIps, _allowedIps) &&
+            const DeepCollectionEquality().equals(other._reserved, _reserved));
+  }
+
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @override
+  int get hashCode => Object.hash(
+      runtimeType,
+      server,
+      serverPort,
+      publicKey,
+      preSharedKey,
+      const DeepCollectionEquality().hash(_allowedIps),
+      const DeepCollectionEquality().hash(_reserved));
+
+  /// Create a copy of Peer
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$PeerImplCopyWith<_$PeerImpl> get copyWith =>
+      __$$PeerImplCopyWithImpl<_$PeerImpl>(this, _$identity);
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$$PeerImplToJson(
+      this,
+    );
+  }
+}
+
+abstract class _Peer implements Peer {
+  const factory _Peer(
+      {@JsonKey(name: "server") final String? server,
+      @JsonKey(name: "server_port") final int? serverPort,
+      @JsonKey(name: "public_key") final String? publicKey,
+      @JsonKey(name: "pre_shared_key") final String? preSharedKey,
+      @JsonKey(name: "allowed_ips") final List<String>? allowedIps,
+      @JsonKey(name: "reserved") final List<int>? reserved}) = _$PeerImpl;
+
+  factory _Peer.fromJson(Map<String, dynamic> json) = _$PeerImpl.fromJson;
+
+  @override
+  @JsonKey(name: "server")
+  String? get server;
+  @override
+  @JsonKey(name: "server_port")
+  int? get serverPort;
+  @override
+  @JsonKey(name: "public_key")
+  String? get publicKey;
+  @override
+  @JsonKey(name: "pre_shared_key")
+  String? get preSharedKey;
+  @override
+  @JsonKey(name: "allowed_ips")
+  List<String>? get allowedIps;
+  @override
+  @JsonKey(name: "reserved")
+  List<int>? get reserved;
+
+  /// Create a copy of Peer
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$PeerImplCopyWith<_$PeerImpl> get copyWith =>
+      throw _privateConstructorUsedError;
+}

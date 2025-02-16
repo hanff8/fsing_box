@@ -180,7 +180,7 @@ const inbounds = [defaultTunInbound, defaultMixedInbound];
 
 const outbounds = [defaultOutbound, finalOutbound];
 
-@unfreezed
+@JsonSerializable()
 class SingboxConfig with _$SingboxConfig {
   factory SingboxConfig({
     @JsonKey(name: "log") @Default(log) LogConf logConf,
@@ -197,4 +197,50 @@ class SingboxConfig with _$SingboxConfig {
 
   factory SingboxConfig.fromJson(Map<String, dynamic> json) =>
       _$SingboxConfigFromJson(json);
+
+  void addDnsServer(DnsServer newDnsServer) {
+    dnsConf = dnsConf.copyWith(
+      dnsServers: [...(dnsConf.dnsServers ?? []), newDnsServer],
+    );
+  }
+
+  void addRuleSet(RuleSet newRuleSet) {
+    routeConf = routeConf.copyWith(
+      ruleSets: [...(routeConf.ruleSets ?? []), newRuleSet],
+    );
+  }
+
+  void addInbound(Inbound newInbound) {
+    inboundConf = inboundConf.copyWith(
+      inbounds: [...(inboundConf.inbounds ?? []), newInbound],
+    );
+  }
+}
+
+@JsonSerializable()
+class SingboxConfigController {
+  SingboxConfig _singboxConfig;
+
+  SingboxConfigController({required SingboxConfig singboxConfig})
+      : _singboxConfig = singboxConfig;
+
+  set config(SingboxConfig config) {
+    _singboxConfig = config;
+  }
+
+  void addDnsServer(DnsServer newDnsServer) {
+    _singboxConfig = _singboxConfig.copyWith(
+      dnsConf: _singboxConfig.dnsConf.copyWith(
+          dnsServers:
+              List<DnsServer>.from(_singboxConfig.dnsConf.dnsServers ?? [])
+                ..add(newDnsServer)),
+    );
+  }
+
+  void addRuleSet(RuleSet newRuleSet) {
+    _singboxConfig = _singboxConfig.copyWith(
+      ruleSets:
+          List<RuleSet>.from(_singboxConfig.ruleSets ?? []).add(newRuleSet),
+    );
+  }
 }

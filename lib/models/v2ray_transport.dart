@@ -1,5 +1,6 @@
 import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:fsing_box/enum/enum.dart';
+import 'package:fsing_box/models/other_config.dart';
 
 part 'generated/v2ray_transport.freezed.dart';
 part 'generated/v2ray_transport.g.dart';
@@ -57,10 +58,3 @@ sealed class V2RayTransport with _$V2RayTransport {
       _$V2RayTransportFromJson(json);
 }
 
-@freezed
-class Headers with _$Headers {
-  const factory Headers() = _Headers;
-
-  factory Headers.fromJson(Map<String, dynamic> json) =>
-      _$HeadersFromJson(json);
-}

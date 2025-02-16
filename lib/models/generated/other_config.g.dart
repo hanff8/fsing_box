@@ -236,3 +236,55 @@ Map<String, dynamic> _$$EndpointImplToJson(_$EndpointImpl instance) =>
       if (instance.type case final value?) 'type': value,
       if (instance.tag case final value?) 'tag': value,
     };
+
+_$HeadersImpl _$$HeadersImplFromJson(Map<String, dynamic> json) =>
+    _$HeadersImpl();
+
+Map<String, dynamic> _$$HeadersImplToJson(_$HeadersImpl instance) =>
+    <String, dynamic>{};
+
+_$UdpOverTcpObjectImpl _$$UdpOverTcpObjectImplFromJson(
+        Map<String, dynamic> json) =>
+    _$UdpOverTcpObjectImpl(
+      enable: json['enable'] as bool? ?? false,
+      version: (json['version'] as num?)?.toInt() ?? 0,
+    );
+
+Map<String, dynamic> _$$UdpOverTcpObjectImplToJson(
+        _$UdpOverTcpObjectImpl instance) =>
+    <String, dynamic>{
+      if (instance.enable case final value?) 'enable': value,
+      if (instance.version case final value?) 'version': value,
+    };
+
+_$TorrcImpl _$$TorrcImplFromJson(Map<String, dynamic> json) => _$TorrcImpl(
+      clientOnly: (json['ClientOnly'] as num?)?.toInt(),
+    );
+
+Map<String, dynamic> _$$TorrcImplToJson(_$TorrcImpl instance) =>
+    <String, dynamic>{
+      if (instance.clientOnly case final value?) 'ClientOnly': value,
+    };
+
+_$PeerImpl _$$PeerImplFromJson(Map<String, dynamic> json) => _$PeerImpl(
+      server: json['server'] as String?,
+      serverPort: (json['server_port'] as num?)?.toInt(),
+      publicKey: json['public_key'] as String?,
+      preSharedKey: json['pre_shared_key'] as String?,
+      allowedIps: (json['allowed_ips'] as List<dynamic>?)
+          ?.map((e) => e as String)
+          .toList(),
+      reserved: (json['reserved'] as List<dynamic>?)
+          ?.map((e) => (e as num).toInt())
+          .toList(),
+    );
+
+Map<String, dynamic> _$$PeerImplToJson(_$PeerImpl instance) =>
+    <String, dynamic>{
+      if (instance.server case final value?) 'server': value,
+      if (instance.serverPort case final value?) 'server_port': value,
+      if (instance.publicKey case final value?) 'public_key': value,
+      if (instance.preSharedKey case final value?) 'pre_shared_key': value,
+      if (instance.allowedIps case final value?) 'allowed_ips': value,
+      if (instance.reserved case final value?) 'reserved': value,
+    };

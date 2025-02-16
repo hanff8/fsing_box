@@ -42,8 +42,6 @@ abstract class $UpdateConfigParamsCopyWith<$Res> {
   @useResult
   $Res call(
       {@JsonKey(name: "profile-id") String profileId, SingboxConfig config});
-
-  $SingboxConfigCopyWith<$Res> get config;
 }
 
 /// @nodoc
@@ -75,16 +73,6 @@ class _$UpdateConfigParamsCopyWithImpl<$Res, $Val extends UpdateConfigParams>
               as SingboxConfig,
     ) as $Val);
   }
-
-  /// Create a copy of UpdateConfigParams
-  /// with the given fields replaced by the non-null parameter values.
-  @override
-  @pragma('vm:prefer-inline')
-  $SingboxConfigCopyWith<$Res> get config {
-    return $SingboxConfigCopyWith<$Res>(_value.config, (value) {
-      return _then(_value.copyWith(config: value) as $Val);
-    });
-  }
 }
 
 /// @nodoc
@@ -97,9 +85,6 @@ abstract class _$$UpdateConfigParamsImplCopyWith<$Res>
   @useResult
   $Res call(
       {@JsonKey(name: "profile-id") String profileId, SingboxConfig config});
-
-  @override
-  $SingboxConfigCopyWith<$Res> get config;
 }
 
 /// @nodoc

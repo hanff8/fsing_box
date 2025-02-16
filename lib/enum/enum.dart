@@ -34,6 +34,7 @@ enum InboundType {
   tproxy,
   direct,
   quic,
+  shadowtls,
 }
 
 enum OutboundType {
